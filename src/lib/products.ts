@@ -26,7 +26,7 @@ export const products: Product[] = [
     name: "ARAMAN AMBER OUD", // UNIQUE NAME
     tagline: "Bold luxury with a rich oriental trail",
     price: 130, 
-    image: "/src/assets/150.jpeg", 
+    image: "/150.jpeg", 
     fragrance: "Woody",
     notes: { 
       top: ["Oud Wood", "Saffron", "Bergamot"], 
@@ -42,7 +42,7 @@ export const products: Product[] = [
     name: "THARWAH GOLD", // UNIQUE NAME
     tagline: "Bold luxury with a rich oriental trail",
     price: 150, 
-    image: "/src/assets/so.jpeg", 
+    image: "/so.jpeg", 
     fragrance: "Oriental",
     notes: { 
       top: ["Lavender", "Bergamot"], 
@@ -58,7 +58,7 @@ export const products: Product[] = [
     name: "ISHQ AL SHUYUKH GOLD", // UNIQUE NAME
     tagline: "Bold luxury with a rich oriental trail",
     price: 150, 
-    image: "/src/assets/nice.jpeg", 
+    image: "/nice.jpeg", 
     fragrance: "Oriental",
     notes: { 
      top: ["Caramel", "Saffron"], 
@@ -74,7 +74,7 @@ export const products: Product[] = [
     name: "VINTAGE RADIO", // UNIQUE NAME
     tagline: "Nostalgic aromatic blends after midnight",
     price: 130, 
-    image: "/src/assets/151.jpeg", 
+    image: "/151.jpeg", 
     fragrance: "Oriental",
     notes: { 
       top: ["Violet Leaf", "Plum", "Sage"], 
@@ -90,7 +90,7 @@ export const products: Product[] = [
     name: "AMAZON PRIDE", // UNIQUE NAME
     tagline: "Bold luxury with a rich oriental trail",
     price: 150, 
-    image: "/src/assets/uiii.jpeg", 
+    image: "/uiii.jpeg", 
     fragrance: "Woody",
     notes: { 
       top: ["Mandarin", "Ginger", "Mint", "Bergamot"], 
@@ -106,7 +106,7 @@ export const products: Product[] = [
     name: "SUPREMACY", // UNIQUE NAME
     tagline: "Bold luxury with a rich oriental trail",
     price: 130, 
-    image: "/src/assets/real.jpeg", 
+    image: "/real.jpeg", 
     fragrance: "Woody",
     notes: { 
       top: ["Black Currant", "Bergamot", "Apple"], 
@@ -122,7 +122,7 @@ export const products: Product[] = [
     name: "MONDGO TAS FRESA", // UNIQUE NAME
     tagline: "A bright, playful sparkle of sweet summer fruit",
     price: 40, 
-    image: "/src/assets/small1.jpeg", 
+    image: "/small1.jpeg", 
     fragrance: "Floral",
     notes: { 
        top: ["Wild Strawberries", "Bergamot"], 
@@ -138,7 +138,7 @@ export const products: Product[] = [
     name: "CRUSH", // UNIQUE NAME
     tagline: "A blooming romance in every drop",
     price: 40, 
-    image: "/src/assets/small2.jpeg", 
+    image: "/small2.jpeg", 
     fragrance: "Fresh",
     notes: { 
       top: ["Pistachio", "Almond", "Salted Caramel"], 
@@ -154,7 +154,7 @@ export const products: Product[] = [
     name: "VAINILLA", // UNIQUE NAME
     tagline: "Elegance wrapped in mesh accents",
     price: 40, 
-    image: "/src/assets/net.jpeg", 
+    image: "/net.jpeg", 
     fragrance: "Floral",
     notes: { 
       top: ["Madagascar Vanilla", "Citrus Zest"], 
@@ -170,7 +170,7 @@ export const products: Product[] = [
     name: "BETRES", 
     tagline: "Skin, only softer",
     price: 40,
-    image: "/src/assets/step.jpeg",
+    image: "/step.jpeg",
     fragrance: "Fresh",
     notes: { 
       top: ["Honeydew Melon", "Cantaloupe", "Bergamot"], 
