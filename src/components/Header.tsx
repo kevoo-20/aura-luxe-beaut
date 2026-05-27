@@ -15,8 +15,9 @@ export function Header() {
   const [search, setSearch] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/70 glass shadow-2xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 backdrop-blur-xl">
+    /* Changed from absolute to fixed to stick at the top, kept bg transparent, added subtle backdrop blur for readability */
+    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-sm transition-all duration-300">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
         <Link
           to="/"
           className="group relative flex flex-col leading-none"
@@ -25,7 +26,7 @@ export function Header() {
             Aura Luxe
           </span>
 
-          <span className="text-xs tracking-[0.45em] text-pink-400 uppercase font-semibold">
+          <span className="text-xs tracking-[0.45em] text-pink-400 uppercase font-semibold mt-1">
             Beauty
           </span>
 
@@ -58,33 +59,33 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2 text-white">
-          <button onClick={() => setSearch((s) => !s)} aria-label="Search" className="rounded-full p-2 hover:bg-white/10">
+          <button onClick={() => setSearch((s) => !s)} aria-label="Search" className="rounded-full p-2 hover:bg-white/10 transition-colors">
             <Search className="h-5 w-5" />
           </button>
-          <Link to="/shop" className="relative rounded-full p-2 hover:bg-white/10" aria-label="Wishlist">
+          <Link to="/shop" className="relative rounded-full p-2 hover:bg-white/10 transition-colors" aria-label="Wishlist">
             <Heart className="h-5 w-5" />
             {wishlist.length > 0 && (
-              <span className="absolute -right-1 -top-1 flex h-4 min-w-4 items-center justify-center rounded-full bg-primary px-1 text-[10px] font-medium text-primary-foreground">
+              <span className="absolute top-0 right-0 flex h-4 min-w-4 items-center justify-center rounded-full bg-pink-500 px-1 text-[9px] font-bold text-white shadow-[0_0_10px_rgba(244,114,182,0.5)]">
                 {wishlist.length}
               </span>
             )}
           </Link>
-          <Link to="/cart" className="relative rounded-full p-2 hover:bg-white/10" aria-label="Cart">
+          <Link to="/cart" className="relative rounded-full p-2 hover:bg-white/10 transition-colors" aria-label="Cart">
             <ShoppingBag className="h-5 w-5" />
             {cartCount > 0 && (
-              <span className="absolute -right-1 -top-1 flex h-4 min-w-4 items-center justify-center rounded-full bg-primary px-1 text-[10px] font-medium text-primary-foreground">
+              <span className="absolute top-0 right-0 flex h-4 min-w-4 items-center justify-center rounded-full bg-pink-500 px-1 text-[9px] font-bold text-white shadow-[0_0_10px_rgba(244,114,182,0.5)]">
                 {cartCount}
               </span>
             )}
           </Link>
-          <button onClick={() => setOpen((o) => !o)} className="md:hidden rounded-full p-2 hover:bg-white/10" aria-label="Menu">
+          <button onClick={() => setOpen((o) => !o)} className="md:hidden rounded-full p-2 hover:bg-white/10 transition-colors" aria-label="Menu">
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
       </div>
 
       {search && (
-        <div className="border-t border-white/10 bg-zinc-900/90 px-6 py-3 animate-fade-up">
+        <div className="border-t border-white/10 bg-black/90 px-6 py-3 backdrop-blur-md">
           <div className="mx-auto flex max-w-3xl items-center gap-3">
             <Search className="h-4 w-4 text-zinc-400" />
             <input

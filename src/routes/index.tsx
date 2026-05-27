@@ -53,10 +53,7 @@ function Home() {
       <section className="relative overflow-hidden">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 md:grid-cols-2 md:py-24">
           <div className="space-y-8 animate-fade-up">
-            <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-card/40 px-4 py-1.5 text-[10px] uppercase tracking-[0.3em] text-muted-foreground backdrop-blur">
-              <Sparkles className="h-3 w-3 text-gold" />
-              New Maison Collection
-            </span>
+            
 
             <h1 className="font-display text-5xl leading-[1.05] md:text-7xl">
               Discover your
@@ -180,14 +177,15 @@ function Home() {
         </div>
       </section>
 
-      {/* WHY CHOOSE US */}
+            {/* WHY CHOOSE US */}
       <section className="mx-auto max-w-7xl px-6 py-24">
         <div className="text-center">
-          <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
-            The Éclat Promise
+          {/* Changed brand promise reference text to Aura Luxe */}
+          <p className="text-xs uppercase tracking-[0.3em] text-zinc-400">
+            The Aura Luxe Promise
           </p>
 
-          <h2 className="mt-2 font-display text-4xl md:text-5xl">
+          <h2 className="mt-2 font-display text-4xl md:text-5xl text-white">
             Why Choose Us
           </h2>
         </div>
@@ -196,38 +194,39 @@ function Home() {
           {[
             {
               icon: Award,
-              title: "Master Perfumers",
-              text: "Crafted in Grasse by award-winning noses.",
+              title: "Premium Blends",
+              text: "Long-lasting designer fragrance profiles.",
             },
             {
               icon: Leaf,
               title: "Clean Ingredients",
-              text: "Ethically sourced, cruelty-free, vegan.",
+              text: "Ethically sourced, cruelty-free, vegan formulas.",
             },
             {
               icon: Sparkles,
-              title: "Hand-Poured",
-              text: "Each bottle finished by hand in our atelier.",
+              title: "Curated Layout",
+              text: "Every piece selected carefully for our collection.",
             },
             {
               icon: Truck,
               title: "Complimentary Shipping",
-              text: "On every order, beautifully packaged.",
+              text: "Available locally on qualifiable basket sizes.",
             },
           ].map((feature, index) => (
             <div
               key={index}
-              className="hover-lift glass rounded-3xl p-8 text-center"
+              /* Swapped system glass utilities with permanent dark zinc panel framing */
+              className="hover-lift rounded-3xl p-8 text-center bg-zinc-900/60 border border-white/10 backdrop-blur-sm"
             >
-              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-secondary">
-                <feature.icon className="h-6 w-6 text-primary" />
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-pink-500/10">
+                <feature.icon className="h-6 w-6 text-pink-400" />
               </div>
 
-              <h3 className="mt-5 font-display text-xl">
+              <h3 className="mt-5 font-display text-xl text-white">
                 {feature.title}
               </h3>
 
-              <p className="mt-2 text-sm text-muted-foreground">
+              <p className="mt-2 text-sm text-zinc-400 leading-relaxed">
                 {feature.text}
               </p>
             </div>
@@ -238,12 +237,12 @@ function Home() {
       {/* TESTIMONIALS */}
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="text-center">
-          <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
+          <p className="text-xs uppercase tracking-[0.3em] text-zinc-400">
             Whispers from the World
           </p>
 
-          <h2 className="mt-2 font-display text-4xl md:text-5xl">
-            She Wears Éclat
+          <h2 className="mt-2 font-display text-4xl md:text-5xl text-white">
+            She Wears Aura Luxe
           </h2>
         </div>
 
@@ -252,38 +251,39 @@ function Home() {
             {
               name: "Amélie R.",
               quote:
-                "Rose Éclat is the most romantic scent I've ever owned. People stop me on the street.",
+                "ARAMAN AMBER OUD is the most romantic scent I've ever owned. People stop me on the street.",
               role: "Accra",
             },
             {
               name: "Léa M.",
               quote:
-                "Violette Nuit feels like silk on the skin. My new evening signature.",
+                "BETRES feels like pure silk on the skin. My absolute new evening signature.",
               role: "Kumasi",
             },
             {
               name: "Saanvi K.",
               quote:
-                "The packaging alone is a gift. The fragrance is poetry.",
+                "The custom packaging alone is a masterpiece. The product quality is incredible.",
               role: "Koforidua",
             },
           ].map((testimonial, index) => (
             <figure
               key={index}
-              className="hover-lift glass rounded-3xl p-8"
+              /* Cleaned layout wrapper frame styles into dark mode styling */
+              className="hover-lift rounded-3xl p-8 bg-zinc-900/40 border border-white/5"
             >
-              <div className="text-gold">★★★★★</div>
+              <div className="text-amber-400 text-sm tracking-wider">★★★★★</div>
 
-              <blockquote className="mt-4 font-display text-lg italic leading-relaxed">
+              <blockquote className="mt-4 font-display text-lg italic leading-relaxed text-zinc-200">
                 "{testimonial.quote}"
               </blockquote>
 
               <figcaption className="mt-6 text-sm">
-                <span className="font-medium">
+                <span className="font-semibold text-white">
                   {testimonial.name}
                 </span>
 
-                <span className="text-muted-foreground">
+                <span className="text-zinc-500">
                   {" "}
                   · {testimonial.role}
                 </span>
@@ -295,23 +295,24 @@ function Home() {
 
       {/* WHATSAPP CONTACT */}
       <section className="mx-auto max-w-7xl px-6 py-20">
-        <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-luxe p-10 text-center md:p-20">
-          <div className="sparkle absolute inset-0" />
+        {/* Changed layout background surface panel away from gradient variables to charcoal black glass boxes */}
+        <div className="relative overflow-hidden rounded-[2.5rem] bg-zinc-900 border border-white/10 p-10 text-center md:p-20 shadow-2xl">
+          <div className="sparkle absolute inset-0 opacity-20" />
 
           <div className="relative">
-            <p className="text-xs uppercase tracking-[0.3em] text-foreground/60">
+            <p className="text-xs uppercase tracking-[0.3em] text-pink-400 font-semibold">
               Connect With Us
             </p>
 
-            <h2 className="mx-auto mt-3 max-w-2xl font-display text-4xl md:text-5xl">
+            <h2 className="mx-auto mt-3 max-w-2xl font-display text-4xl md:text-5xl text-white">
               Discover New{" "}
-              <span className="italic text-gradient-gold">
+              <span className="italic text-amber-400">
                 Scents
               </span>{" "}
               on WhatsApp
             </h2>
 
-            <p className="mx-auto mt-4 max-w-md text-sm text-foreground/70">
+            <p className="mx-auto mt-4 max-w-md text-sm text-zinc-400 leading-relaxed">
               Get access to private launches, direct
               consultations, and a complimentary sample with
               your first order.
@@ -322,7 +323,8 @@ function Home() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-gold px-8 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-background transition-transform hover:scale-[1.02]"
+                /* Rewrote button highlight classes to match signature pink layout tags */
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-pink-500 px-8 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-white transition-all hover:bg-pink-600 shadow-[0_0_20px_rgba(244,114,182,0.2)]"
               >
                 <MessageSquare className="h-4 w-4" />
                 Chat Directly via WhatsApp
